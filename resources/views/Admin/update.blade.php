@@ -157,14 +157,26 @@
         </div>
 
         <div class="p-6 border-t border-blue-100">
-            <div class="space-y-3">
+            {{-- <div class="space-y-3">
                 <button onclick="localStorage.removeItem('admin_token'); window.location.href='/admin/login'" class="w-full flex items-center px-4 py-3 text-left rounded-xl transition-all duration-200 bg-red-100 hover:bg-red-200 hover:shadow-sm">
                     <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
                         <i class="fa-solid fa-sign-out-alt text-red-600"></i>
                     </div>
                     <span class="font-medium text-red-600">Logout</span>
                 </button>
+            </div> --}}
+            <div class="space-y-3">
+                <button 
+                    onclick="localStorage.removeItem('admin_token'); window.location.href='{{ url('admin/login') }}'" 
+                    class="w-full flex items-center px-4 py-3 text-left rounded-xl transition-all duration-200 bg-red-100 hover:bg-red-200 hover:shadow-sm"
+                >
+                    <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fa-solid fa-sign-out-alt text-red-600"></i>
+                    </div>
+                    <span class="font-medium text-red-600">Logout</span>
+                </button>
             </div>
+            
             <p class="mt-4 text-xs text-center text-gray-400">
                 &copy; 2025 Engage Lanka, a subsidiary of Softmaster Technologies (Pvt) Ltd.<br>All rights reserved.
             </p>
@@ -177,7 +189,7 @@
         <!-- Header Section -->
         <div class="animate-fade-in">
             <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/20 mb-8">
-                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                {{-- <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                     <div>
                         <h2 class="text-3xl font-bold gradient-text mb-2">Edit Guide Profile</h2>
                         <p class="text-gray-600">Manage and edit individual guide profiles here</p>
@@ -186,7 +198,19 @@
                         <i class="fa-solid fa-arrow-left text-lg group-hover:-translate-x-1 transition-transform"></i>
                         <span class="font-semibold">Back to Dashboard</span>
                     </a>
+                </div> --}}
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                    <div>
+                        <h2 class="text-3xl font-bold gradient-text mb-2">Edit Guide Profile</h2>
+                        <p class="text-gray-600">Manage and edit individual guide profiles here</p>
+                    </div>
+                    <a href="{{ url('/admin/dashboard') }}"
+                       class="group bg-white/90 backdrop-blur-md border border-white/30 hover:bg-white text-gray-700 hover:text-gray-900 rounded-2xl px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        <i class="fa-solid fa-arrow-left text-lg group-hover:-translate-x-1 transition-transform"></i>
+                        <span class="font-semibold">Back to Dashboard</span>
+                    </a>
                 </div>
+                
             </div>
 
             <!-- Guide Info Section -->

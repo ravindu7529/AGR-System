@@ -54,7 +54,7 @@
 </head>
 
 <body class="min-h-screen bg-gray-50 flex flex-col">
-    <a href="/" class="fixed left-4 top-4 z-20 group bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-gray-900 rounded-xl px-4 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-3 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+    <a href="{{ url('/')}}" class="fixed left-4 top-4 z-20 group bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-gray-900 rounded-xl px-4 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-3 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
     <i class="fa-solid fa-arrow-left text-base md:text-lg group-hover:-translate-x-1 transition-transform"></i>
     <span class="font-medium md:font-semibold text-sm md:text-base">Back to Home</span>
     </a>
@@ -134,12 +134,12 @@
         </div>
       </div>
 
-      <div class="mt-8 text-center">
+      {{-- <div class="mt-8 text-center">
         <p class="text-sm text-gray-600">
           Forgot your credentials?
-          <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">Contact IT Support</a>
+          <a href="{{ url('#')}}" class="text-green-600 hover:text-green-700 font-semibold transition-colors">Contact IT Support</a>
         </p>
-      </div>
+      </div> --}}
     </div>
   </main>
 
@@ -193,7 +193,7 @@
           loginBtnText.innerHTML = '<i class="fas fa-check mr-2"></i>Access Granted!';
           loginBtn.classList.replace('from-green-500', 'from-green-600');
           loginBtn.classList.replace('to-emerald-600', 'to-green-700');
-          setTimeout(() => window.location.href = '/admin/dashboard', 1000);
+          setTimeout(() => window.location.href ="{{ url('/admin/dashboard')}}", 1000);
         }
       } catch (err) {
         errorEl.textContent = 'Network error. Please check your connection and try again.';
@@ -210,20 +210,20 @@
     });
   </script>
 
-  <footer class="relative z-10 bg-white/80 backdrop-blur-sm border-t border-gray-200">
+  {{-- <footer class="relative z-10 bg-white/80 backdrop-blur-sm border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
       <p class="text-sm text-gray-600">
-        &copy; 2025 Engage Lanka, a subsidiary of Softmaster Technologies (Pvt) Ltd. All rights reserved.
+        &copy; 2025 Athreya Ayuruveda Asrham (Pvt) Ltd. All rights reserved. Powered by Engage Lanka - Softmaster Technologies Pvt Ltd
       </p>
       <div class="mt-2 flex items-center justify-center gap-4 text-xs text-gray-500">
-        <a href="#" class="hover:text-green-600 transition-colors">Privacy Policy</a>
+        <a href="{{ url('#')}}" class="hover:text-green-600 transition-colors">Privacy Policy</a>
         <span>•</span>
-        <a href="#" class="hover:text-green-600 transition-colors">Terms of Service</a>
+        <a href= "{{ url('#')}}" class="hover:text-green-600 transition-colors">Terms of Service</a>
         <span>•</span>
-        <a href="#" class="hover:text-green-600 transition-colors">Admin Support</a>
+        <a href="{{url('#')}}" class="hover:text-green-600 transition-colors">Admin Support</a>
       </div>
     </div>
-  </footer>
+  </footer> --}}
 </body>
 
 </html>

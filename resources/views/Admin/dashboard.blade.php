@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script defer>
         const token = localStorage.getItem('admin_token');
-        if (!token) window.location.href = '/guide/login';
+        if (!token) window.location.href = "{{url('/guide/login')}}" ;
     </script>
     <style>
         .nav-item.active {
@@ -313,11 +313,11 @@
                                 </div>
                             </div>
 
-                            {{-- <a href="{{ $board['linkPrefix'] . $item->id }}/update"
+                            {{-- <a href="{{ url ( '$board['linkPrefix'] . $item->id') }}/update"
                             class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:shadow-lg transition-all duration-200 text-sm font-medium">
                                 View <i class="fa-solid fa-arrow-right ml-1"></i>
                             </a> --}}
-                            <a href="{{ $board['linkPrefix'] . $item->id }}/update"
+                            <a href="{{url ($board['linkPrefix'] . $item->id)}}/update"
                                 class="px-4 py-2 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-600 hover:text-white hover:shadow-md transition-all duration-200 text-sm font-medium">
                                 <i class="fa-solid fa-eye ml-1"></i>
                                 View
@@ -805,7 +805,7 @@
 
 
         if (!localStorage.getItem('admin_token')) {
-            window.location.href = '/';
+            window.location.href = "{{ url('/')}}";
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -992,7 +992,7 @@ async function refreshGuidesTable() {
 
                         <!-- Actions -->
                         <td class="px-6 py-4 text-center">
-                            <a href="/admin/guide/${guide.id}/update"
+                            <a href="{{url('/admin/guide/${guide.id}/update')}}"
                                class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl text-sm hover:shadow-lg transition-all duration-200 inline-flex items-center space-x-2">
                                 <i class="fa-solid fa-eye"></i>
                                 <span>View</span>
@@ -1065,11 +1065,11 @@ async function refreshGuidesTable() {
         function logout() {
             if (!confirm('Are you sure you want to logout?')) return;
             localStorage.removeItem('admin_token');
-            window.location.href = '/admin/login';
+            window.location.href = "{{url('/admin/login')}}";
         }
 
         function goToProfile() {
-            window.location.href = '/admin/profile;'
+            window.location.href = "{{ url('/admin/profile;')}}";
         }
 
         function showSection(id) {
@@ -1206,7 +1206,7 @@ async function refreshGuidesTable() {
 
                             <!-- Actions -->
                             <td class="px-6 py-4 text-center">
-                                <a href="/admin/guide/${guide.id}/update"
+                                <a href="{{url('/admin/guide/${guide.id}/update')}}"
                                 class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl text-sm hover:shadow-lg transition-all duration-200 inline-flex items-center space-x-2">
                                     <i class="fa-solid fa-eye"></i>
                                     <span>View</span>
@@ -1279,7 +1279,7 @@ async function refreshGuidesTable() {
                                 <div class="flex items-center justify-between gap-2 pt-2">
                                     <button
                                         class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-200"
-                                        onclick="window.location.href='/admin/guide/${guide.id}/update'">
+                                        onclick="window.location.href="{{ url('/admin/guide/${guide.id}/update')}}">
                                         View Profile
                                     </button>
                                     <button
@@ -1488,7 +1488,7 @@ async function refreshGuidesTable() {
 
                             <!-- Actions -->
                             <td class="px-6 py-4 text-center">
-                                <a href="/admin/guide/${guide.id}/update"
+                                <a href="{{ url('/admin/guide/${guide.id}/update')}}"
                                    class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl text-sm hover:shadow-lg transition-all duration-200 inline-flex items-center space-x-2">
                                     <i class="fa-solid fa-eye"></i>
                                     <span>View</span>
@@ -1737,7 +1737,7 @@ async function refreshGuidesTable() {
             if (statusDiv) statusDiv.innerHTML = '';
 
             try {
-                const response = await fetch('/api/admin/visits', {
+                const response = await fetch(href="{{'/api/admin/visits'}}", {
                     method: 'POST',
                     headers: {
                         'Authorization': 'Bearer ' + token,

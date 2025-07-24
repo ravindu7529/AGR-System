@@ -64,7 +64,7 @@
       <!-- Portal Cards -->
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Admin Portal -->
-        <a href="/admin/login" class="group card-hover bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden block">
+        <a href="{{url('/admin/login')}}" class="group card-hover bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden block">
           <div class="relative z-10">
             <div class="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-300 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
               <i class="fas fa-user-shield text-3xl text-white"></i>
@@ -81,7 +81,7 @@
         </a>
 
         <!-- Guide Portal -->
-        <a href="/guide/login" class="group card-hover bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden block">
+        <a href="{{url('/guide/login')}}" class="group card-hover bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden block">
           <div class="relative z-10">
             <div class="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
               <i class="fas fa-user-tie text-3xl text-white"></i>
@@ -136,11 +136,11 @@
         &copy; 2025 Engage Lanka, a subsidiary of Softmaster Technologies (Pvt) Ltd. All rights reserved.
       </p>
       <div class="mt-2 flex items-center justify-center gap-4 text-xs text-gray-500">
-        <a href="#" class="hover:text-green-600 transition-colors">Privacy Policy</a>
+        <a href="{{url('#')}}" class="hover:text-green-600 transition-colors">Privacy Policy</a>
         <span>•</span>
-        <a href="#" class="hover:text-green-600 transition-colors">Terms of Service</a>
+        <a href="{{url('#')}}" class="hover:text-green-600 transition-colors">Terms of Service</a>
         <span>•</span>
-        <a href="#" class="hover:text-green-600 transition-colors">Admin Support</a>
+        <a href="{{url('#')}}" class="hover:text-green-600 transition-colors">Admin Support</a>
       </div>
     </div>
   </footer>

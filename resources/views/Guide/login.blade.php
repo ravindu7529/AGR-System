@@ -24,7 +24,7 @@
   </style>
 </head>
 <body class="min-h-screen bg-gray-50 flex flex-col">
-    <a href="/" class="fixed left-4 top-4 z-20 group bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-gray-900 rounded-xl px-4 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-3 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+    <a href="{{url('/')}}" class="fixed left-4 top-4 z-20 group bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-gray-900 rounded-xl px-4 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-3 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
     <i class="fa-solid fa-arrow-left text-base md:text-lg group-hover:-translate-x-1 transition-transform"></i>
     <span class="font-medium md:font-semibold text-sm md:text-base">Back to Home</span>
     </a>
@@ -83,7 +83,7 @@
       <div class="mt-8 text-center">
         <p class="text-sm text-gray-600">
           Need help?
-          <a href="#" class="text-amber-600 hover:text-amber-700 font-semibold transition-colors">Contact Support</a>
+          <a href="{{url('#')}}" class="text-amber-600 hover:text-amber-700 font-semibold transition-colors">Contact Support</a>
         </p>
       </div>
     </div>
@@ -151,11 +151,11 @@
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
       <p class="text-sm text-gray-600">&copy; 2025 Engage Lanka, a subsidiary of Softmaster Technologies (Pvt) Ltd. All rights reserved.</p>
       <div class="mt-2 flex items-center justify-center gap-4 text-xs text-gray-500">
-        <a href="#" class="hover:text-amber-600 transition-colors">Privacy Policy</a>
+        <a href="{{url('#')}}" class="hover:text-amber-600 transition-colors">Privacy Policy</a>
         <span>•</span>
-        <a href="#" class="hover:text-amber-600 transition-colors">Terms of Service</a>
+        <a href="{{url('#')}}" class="hover:text-amber-600 transition-colors">Terms of Service</a>
         <span>•</span>
-        <a href="#" class="hover:text-amber-600 transition-colors">Support</a>
+        <a href="{{url('#')}}" class="hover:text-amber-600 transition-colors">Support</a>
       </div>
     </div>
   </footer>
